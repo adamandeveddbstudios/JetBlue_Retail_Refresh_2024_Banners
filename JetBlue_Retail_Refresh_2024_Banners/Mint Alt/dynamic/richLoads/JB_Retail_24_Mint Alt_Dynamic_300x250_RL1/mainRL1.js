@@ -107,7 +107,7 @@ function animate() {
   .to('#h1', 0.5, { autoAlpha: 0, ease: Power1.easeOut}, "frame2+=0.5")
   .to('#h2', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=1")
 
-  .addLabel('frame_END', "frame3+=4")
+  .addLabel('frame_END', "frame2+=4")
   .to('#endframeBg', 0.6 ,{ top: 0, ease: Back.easeOut.config(.3)}, 'frame_END')
   .to('#terms1', 0.5, { autoAlpha: 0, ease: Power1.easeOut}, 'frame_END')
 

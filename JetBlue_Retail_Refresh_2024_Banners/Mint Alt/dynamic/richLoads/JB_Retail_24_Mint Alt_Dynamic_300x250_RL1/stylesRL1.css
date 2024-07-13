@@ -77,8 +77,8 @@ video {
 #text_holder {
   color: #FFFFFF;
   font-family: "ESKlarheitGrotesk Xbd";
-  font-size: 17px;
-  line-height: 19px;
+  font-size: 16.5px;
+  line-height: 18.5px;
 }
 
 #cardtext_holder {
@@ -90,7 +90,7 @@ video {
 
 #endframeBg {
   position: absolute; 
-  top: 176px;
+  top: 173px;
   height: 250px;
   width: 100%; 
   background: #FFFFFF;
@@ -117,8 +117,8 @@ video {
 #h3 {
   width: 260px;
   height: 74px;
-  left: 21px;
-  top: 12px;
+  left: 20px;
+  top: 18px;
   letter-spacing: -0.02em;
 }
 #h2 .color{
