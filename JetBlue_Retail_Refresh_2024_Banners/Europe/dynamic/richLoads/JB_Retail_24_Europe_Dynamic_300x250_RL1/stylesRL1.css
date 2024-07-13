@@ -75,7 +75,7 @@ video {
 /* Text */
 
 #text_holder {
-  color: #FFFFFF;
+  color: #fff;
   font-family: "ESKlarheitGrotesk Xbd";
   font-size: 19px;
   line-height: 21px;
@@ -90,7 +90,7 @@ video {
 
 #endframeBg {
   position: absolute; 
-  top: 176px;
+  top: 173px;
   height: 250px;
   width: 100%; 
   background: #FFFFFF;
@@ -118,7 +118,7 @@ video {
   width: 260px;
   height: 74px;
   left: 21px;
-  top: 12px;
+  top: 18px;
   letter-spacing: -0.02em;
 }
 #h1 .color{
