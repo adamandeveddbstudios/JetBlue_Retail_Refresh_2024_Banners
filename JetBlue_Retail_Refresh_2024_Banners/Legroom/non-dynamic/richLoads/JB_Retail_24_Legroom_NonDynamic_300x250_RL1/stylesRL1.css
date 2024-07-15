@@ -167,12 +167,12 @@ video {
 }
 
 #logoHolder {
-  width: 262px;
+  width: 259px;
   height: 29px;
-  left: 20px;
+  left: 22px;
   top: 192px;
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   align-items: center;
   justify-content: space-between;
 }
@@ -185,7 +185,16 @@ video {
   width: 66px;
   height: auto;
 }
-
+#cta {
+  width: 85px;
+  height: 23px;
+  background-color: #00e1ff;
+  border-radius: 6px;
+  color: #0000aa;
+  font-family: "ESKlarheitGrotesk Smbd";
+  text-align: center;
+  font-size: 10px;
+}
 #partner_logo_container{
   width: 164px;  
   height: 29px;
