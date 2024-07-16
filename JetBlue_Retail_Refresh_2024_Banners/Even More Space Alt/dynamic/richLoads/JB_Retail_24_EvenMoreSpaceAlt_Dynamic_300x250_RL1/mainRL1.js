@@ -99,12 +99,12 @@ function init() {
 
 function animate() {
   tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
-
   tl.addLabel('frame1', 0)
   .to('#h1', 0.5, { autoAlpha: 1, ease: Power1.easeOut}, 'frame1')
 
   .addLabel('frame2', 'frame1+=3')
-  .to('#h1', 0.5, { autoAlpha: 0, ease: Power1.easeOut}, "frame2+=0.5")
+  .to(['#h1', '#photo1'], 0.5, { autoAlpha: 0, ease: Power1.easeOut}, "frame2+=0.5")
+  .to('#photo2', { autoAlpha: 1, ease: Power1.easeOut }, "<")
   .to('#h2', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=1")
 
   .addLabel('frame_END', "frame2+=4")
