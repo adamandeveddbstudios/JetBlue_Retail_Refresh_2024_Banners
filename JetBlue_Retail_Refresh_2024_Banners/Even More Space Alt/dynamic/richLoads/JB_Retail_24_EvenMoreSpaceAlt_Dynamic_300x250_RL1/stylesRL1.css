@@ -232,3 +232,10 @@ video {
   border-radius: 16px;
   z-index: 1;
 }
+
+#photo, #photo1 {
+  width: 300px;
+  height: 250px;
+  opacity: 1; /* Ensure both elements start fully visible */
+  transition: opacity 0.5s ease; /* CSS transition for opacity */
+}

@@ -99,13 +99,13 @@ function init() {
 
 function animate() {
   tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
+  tl.set(["#photo1, #photo2"], { rotationZ: 0.1, force3D:true});
   tl.addLabel('frame1', 0)
-  .to('#h1', 0.5, { autoAlpha: 1, ease: Power1.easeOut}, 'frame1')
+  .to(['#h1', '#photo1'], 0.5, { autoAlpha: 1, ease: Power1.easeOut}, 'frame1')
 
   .addLabel('frame2', 'frame1+=3')
-  .to(['#h1', '#photo1'], 0.5, { autoAlpha: 0, ease: Power1.easeOut}, "frame2+=0.5")
-  .to('#photo2', { autoAlpha: 1, ease: Power1.easeOut }, "<")
-  .to('#h2', 0.5, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=1")
+  .to(['#h1', '#photo1'], 1, { autoAlpha: 0, ease: Power1.easeOut}, "frame2+=0.5")
+  .to(['#h2','#photo2'], 1, { x: '0%', autoAlpha: 1, ease: Power2.easeInOut }, "frame2+=0.75") // slide in #photo2
 
   .addLabel('frame_END', "frame2+=4")
   .to('#endframeBg', 0.6 ,{ top: 0, ease: Back.easeOut.config(.3)}, 'frame_END')
