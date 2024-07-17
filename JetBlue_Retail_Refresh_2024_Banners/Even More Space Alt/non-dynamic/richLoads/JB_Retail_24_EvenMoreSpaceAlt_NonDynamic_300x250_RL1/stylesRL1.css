@@ -249,4 +249,5 @@ video {
   height: 250px;
   opacity: 1; /* Ensure both elements start fully visible */
   transition: opacity 0.5s ease; /* CSS transition for opacity */
+  transition: all 1s ease;
 }
