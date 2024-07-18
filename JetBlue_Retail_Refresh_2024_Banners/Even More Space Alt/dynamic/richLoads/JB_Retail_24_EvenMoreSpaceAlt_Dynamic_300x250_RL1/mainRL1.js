@@ -105,7 +105,9 @@ function animate() {
 
   .addLabel('frame2', 'frame1+=3')
   .to(['#h1', '#photo1'], 1, { autoAlpha: 0, ease: Power1.easeOut}, "frame2+=0.5")
-  .to(['#h2','#photo2'], 1, { x: '0%', autoAlpha: 1, ease: Power2.easeInOut }, "frame2+=0.75") // slide in #photo2
+
+  .to(['#photo2'], 0.5, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=0.1")
+  .to(['#h2'], 1, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=0.75")
 
   .addLabel('frame_END', "frame2+=4")
   .to('#endframeBg', 0.6 ,{ top: 0, ease: Back.easeOut.config(.3)}, 'frame_END')
