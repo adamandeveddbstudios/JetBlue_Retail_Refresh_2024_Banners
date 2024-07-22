@@ -99,7 +99,6 @@ function init() {
   setRollover();
 }
 
-
 function animate() {
   tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
   tl.set(["#photo1, #photo2"], { rotationZ: 0.1, force3D:true});
@@ -111,8 +110,19 @@ function animate() {
 
   .to(['#photo2'], 0.5, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=0.1")
   .to(['#h2'], 1, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=0.75")
-}
 
+  // .addLabel('frame_END', "frame2+=4")
+  // .to('#endframeBg', 0.6 ,{ top: 0, ease: Back.easeOut.config(.3)}, 'frame_END')
+  // .to('#terms1', 0.5, { autoAlpha: 0, ease: Power1.easeOut}, 'frame_END')
+  
+  ////////////////////////////////////////
+    //@FT2 code block start
+    .call(playEndframe, ["param1"], "frame_END")
+    //@FT2 code block end
+    ////////////////////////////////////////
+
+
+}
 ////////////////////////////////////////
 //@FT3 code block start
 function playEndframe(param1){

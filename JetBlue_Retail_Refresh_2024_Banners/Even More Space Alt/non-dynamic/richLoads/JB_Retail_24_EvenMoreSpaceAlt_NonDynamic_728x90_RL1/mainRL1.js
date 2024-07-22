@@ -57,6 +57,9 @@ myFT.on('instantads',function(){
       }else{
         //partner logo included in feed
         console.log('partner logo included!')
+        document.getElementById('logoHolder').style.justifyContent = 'space-between'
+        document.getElementById('partner_logo_container').style.width = '77px'
+
 
         var partner_logo_img = myFT.$("#partner_logo_img");
         partner_logo_img[0].src=partner_logo_src;
@@ -97,8 +100,8 @@ function init() {
 
   animate();
   setRollover();
-}
 
+}
 
 function animate() {
   tl.set(["#main_content"], { autoAlpha: 1, force3D: true });
@@ -111,8 +114,20 @@ function animate() {
 
   .to(['#photo2'], 0.5, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=0.1")
   .to(['#h2'], 1, { autoAlpha: 1, ease: Power1.easeOut }, "frame2+=0.75")
-}
 
+  // .addLabel('frame_END', "frame2+=4")
+  // .to('#endframeBg', 0.6 ,{ left: 0, ease: Back.easeOut.config(.3)}, 'frame_END')
+  // .to('#terms1', 0.5, { autoAlpha: 0, ease: Power1.easeOut}, 'frame_END')
+
+
+  ////////////////////////////////////////
+  //@FT2 code block start
+  .call(playEndframe, ["param1"], "frame_END")
+  //@FT2 code block end
+  ////////////////////////////////////////
+
+
+}
 ////////////////////////////////////////
 //@FT3 code block start
 function playEndframe(param1){
@@ -121,7 +136,9 @@ function playEndframe(param1){
 //@FT3 code block end
 ////////////////////////////////////////
 
-//grow CTA on hover
+
+// CTA grow on hover
+
 function setRollover() {
   document.getElementById('default_exit').addEventListener('mouseover', defaultOver, false);
   document.getElementById('default_exit').addEventListener('mouseout', defaultOut, false);
@@ -134,7 +151,6 @@ function defaultOver() {
 function defaultOut() {
   TweenMax.to('#cta', 0.25, { scale: 1, ease: Power1.easeInOut })
 }
-
 ////////////////////////////////////////
 //@FT4 code block start
 
