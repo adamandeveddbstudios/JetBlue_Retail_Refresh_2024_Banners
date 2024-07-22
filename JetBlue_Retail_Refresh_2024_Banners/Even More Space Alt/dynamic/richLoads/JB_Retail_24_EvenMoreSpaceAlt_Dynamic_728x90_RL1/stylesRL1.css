@@ -132,7 +132,7 @@ video {
 }
 #h2 .asterisk {
   font-size: 10px;
-  /* line-height: 23px; */
+  line-height: 11px;
   top: -6px;
   left: -2px;
   position: relative;
