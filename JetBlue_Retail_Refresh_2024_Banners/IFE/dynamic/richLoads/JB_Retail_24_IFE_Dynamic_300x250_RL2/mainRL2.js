@@ -30,7 +30,7 @@ var price = myFT.$("#price"),
     oneWay = myFT.$(".one_way"),
     default_exit = myFT.$("#default_exit"),
     h4 = myFT.$("#h4");
-    cta = myFT.$("#cta")
+    cta = myFT.$("#cta");
 
 //@FT Setting local variable values using FT dynamic variables (instantAds)
 ctURL           = myFT.instantAds.Retail_default_clickTag_URL
