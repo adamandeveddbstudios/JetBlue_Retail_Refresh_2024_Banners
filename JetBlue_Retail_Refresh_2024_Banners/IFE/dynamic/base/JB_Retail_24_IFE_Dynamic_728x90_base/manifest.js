@@ -28,7 +28,7 @@ FT.manifest({
 		{"name": "one_way_text",					"type": "text",			"default": "one<br>way<sup class='asterisk'>&ast;</sup>"},
 		{"name": "seeDetails_button_text",			"type": "text",			"default": ""},
 		{"name": "seeDetails_body_text",			"type": "text",			"default": ""},
-		{"name": "restrictions_text",				"type": "text",			"default": "<span class='asterisk'>&ast;</span>Restrictions apply, base fare only.<br>&copy;<span id="year"></span>  Universal Pictures. All Rights Reserved."},
+		{"name": "restrictions_text",				"type": "text",			"default": "<span class='asterisk'>&ast;</span>Restrictions apply, base fare only.<br>&copy;2024  Universal Pictures. All Rights Reserved."},
 		{"name": "Retail_dynamic_clickTag_URL",		"type": "text",			"default": "http://www.jetblue.com"},
 		{"name": "Retail_default_clickTag_URL",		"type": "text",			"default": "http://www.jetblue.com"},
 		{"name": "PSA_dynamic_clickTag_URL",		"type": "text",			"default": "http://www.avis.com"}
