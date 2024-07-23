@@ -92,3 +92,7 @@ function endTime(){
   console.log("Animation duration: " + ((endTime - startTime) / 1000) + " seconds");
 }
 
+
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById("year").innerHTML = year;
