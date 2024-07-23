@@ -1,0 +1,236 @@
+body,
+body * {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+img {
+  border: 0;
+}
+
+button,
+div,
+img,
+svg,
+video {
+  position: absolute;
+}
+
+#main_container {
+  position: absolute;
+  background-color: #0000AA;
+  border: 1px solid #000000;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 300px;
+  height: 600px;
+}
+
+#main_content {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 300px;
+  height: 600px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#default_exit {
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  z-index: 500;
+}
+
+:focus {
+  outline: 0;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+@font-face {
+  font-family: "ESKlarheitGrotesk Smbd";
+  src: url("./fonts/ESKlarheitGrotesk-Smbd.woff");
+}
+
+@font-face {
+  font-family: "ESKlarheitGrotesk Xbd";
+  src: url("./fonts/ESKlarheitGrotesk-Xbd.woff");
+}
+
+
+#background {
+  width: 300px;
+  height: 600px;
+}
+
+#text_holder {
+  color: #FFFFFF;
+  font-family: "ESKlarheitGrotesk Xbd";
+  font-size: 26px;
+  line-height: 20.7pt;
+  letter-spacing: -0.5pt;
+}
+.text_seagreen {
+  color: #00dcaa;
+}
+#cardtext_holder {
+  color: #FFFFFF;
+  font-family: "ESKlarheitGrotesk Xbd";
+  font-size: 22px;
+  line-height: 23px;
+}
+
+#endframeBg {
+  position: absolute;
+  top: 459px;
+  height: 600px;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+#seagreenRibbon {
+  position: relative;
+  top: 0px;
+  height: 11px;
+  width: 100%;
+  background: #00dcaa;
+}
+
+#blueBottomCard {
+  background-color: #0000aa;
+  width: 100%;
+  height: 130px;
+  left: 0px;
+  top: 470px;
+}
+
+.blue {
+  color: #0033A0;
+}
+
+#h1,
+#h2 {
+  width: 240px;
+  left: 27px;
+  top: 17px;
+}
+
+#h3 {
+  color: #0000AA;
+  font-family: "ESKlarheitGrotesk Xbd";
+  font-size: 31px;
+  line-height: 34px;
+  width: 220px;
+  left: 20px;
+  top: 88px;
+}
+
+.asterisk {
+  font-size: 15px;
+  line-height: 0px;
+  position: relative;
+  top: -8px;
+  left: -1px;
+}
+
+#cta {
+  width: 109px;
+  height: 27px;
+  background-color: #00e1ff;
+  border-radius: 4px;
+  color: #0000aa;
+  font-family: "ESKlarheitGrotesk Smbd";
+  text-align: center;
+  font-size: 14px;
+  padding-top: 4px;
+  top: 0;
+  left: 0;
+}
+
+/* terms and logo text */
+
+.terms {
+  font-family: "ESKlarheitGrotesk Smbd";
+  font-size: 7px;
+  line-height: 9px;
+  letter-spacing: 0.045pt;
+  left: 19px;
+  width: 250px;
+  color: #FFFFFF;
+}
+
+#termsCopyright {
+  top: 563px;
+}
+
+#terms1{
+  top: 573px;
+}
+
+#logoHolder {
+  width: 260px;
+  height: 61px;
+  left: 19px;
+  top: 493px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logoHolder > * {
+  position: relative
+}
+
+#logo {
+  width: 105.5px;
+  height: auto;
+}
+
+#partner_logo_container{
+  width: 108px;
+  height: 41px;
+  z-index: 1501;  
+  display: block;
+  white-space: nowrap;
+}
+
+#partner_logo_img{
+  width: 108px;
+  height: 41px;
+  object-fit: contain;
+  object-position: left;
+}
+
+/* Creative */
+
+#armhandle {
+  width: 100%;
+  height: 100%;
+  transform-origin: 35% 85.2%;
+  will-change: transform, rotate;
+  transform: rotate(-90deg);
+}
+
+#arm {
+  will-change: transform, rotate, scale;
+}
+
+
+#basketball {
+  top: 244px;
+  left: 12px;
+  will-change: transform, rotate, scale;
+}
