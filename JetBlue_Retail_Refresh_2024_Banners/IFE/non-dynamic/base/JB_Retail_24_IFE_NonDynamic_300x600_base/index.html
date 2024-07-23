@@ -35,7 +35,6 @@
 			overflow: visible;
 
 		}
-
 		#RL1_holder{
 			position: absolute;
 			width: 100%;
@@ -46,20 +45,21 @@
 			opacity: 0;
 			visibility:hidden;
 			overflow: visible;
+
 		   transition: opacity .15s ease-in-out;
 		   -moz-transition: opacity .15s ease-in-out;
 		   -webkit-transition: opacity .15s ease-in-out;
 
 		}
-
 	</style>
 </head>
 <body>
 	<div id="border"></div>
 	
-	<div id="RL1_holder"></div>
+	<div id="RL1_holder">
 		<ft-richload name="RL1" id="RL1_div"></ft-richload>
 	</div>
+
 
 	<script src="https://cdn.flashtalking.com/frameworks/js/api/2/10/html5API.js"></script>
 	<script src="https://cdn.flashtalking.com/feeds/frameworks/js/api/20/FTFeed.min.js"></script>
@@ -74,7 +74,9 @@
 			RL1_loaded=false,
 			RL1_ready=false,
 			showDefault=true,
-			borderColor="#999";
+			borderColor="#999",
+			RL1_play_count=0;
+		
 		
 		myFT.on('RL1_available',function(){			
 			console.log("BASE: RL1_available +")
@@ -82,7 +84,6 @@
 			loadChecker();
 		});
 
-		
 		myFT.on('RL1_ready_to_play',RL1_ready_to_play)
 
 		function RL1_ready_to_play(){
@@ -91,15 +92,16 @@
 			ready_to_play();
 		}
 
-		function ready_to_play(){			
-
-			if(RL1_ready){		
+		function ready_to_play(){
+			if(RL1_ready && RL1_play_count === 0){				
 				myFT.dispatch('RL1_play' );
 				RL1_holder[0].style.visibility="visible";
 				RL1_holder[0].style.opacity="1";
-				border[0].style.opacity="1";			
+				border[0].style.opacity="1";
+				RL1_play_count+=1;		
 			}
 		}
+
 		function loadChecker(){		
 			console.log('loadChecker---------------------')	
 			console.log('RL1_loaded='+RL1_loaded)
@@ -117,8 +119,6 @@
 				setTimeout(loadChecker,500)
 			}
 		}		
-		
-		
 
 		function feedSuccess(feedArray, feed_url){			
 			console.log('feed loaded')
@@ -127,18 +127,15 @@
 			isFeedLoaded=true;
 			showDefault=false;
 
-			console.log('===================================');
-			console.log('destination_longform from feed: '+feedArray[0].destination_longform);
-
 			//State Call Tracking Code
 			var tracking_string=feedArray[0].origin_destination_codes+"|"+feedArray[0].lowestfare_faredollaramount;
 			Tracker.impressionTrackEvent(tracking_string);
-			//console.log('State Call String: '+tracking_string)
-			
+			console.log('State Call String: '+tracking_string)
+
 		};
 		function feedError(error, extra_information){
 			//this will be used in cases where no feed is being used (blank dynamic variable) or if there is an error with feed
-			//console.log('feed error')
+			console.log('feed error')
 			showDefault=true;
 			isFeedLoaded=true;
 		};
