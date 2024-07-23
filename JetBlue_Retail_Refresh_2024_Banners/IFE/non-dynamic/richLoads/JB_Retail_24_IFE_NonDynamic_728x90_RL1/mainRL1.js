@@ -89,3 +89,10 @@ function endTime(){
   var endTime = new Date()
   console.log("Animation duration: " + ((endTime - startTime) / 1000) + " seconds");
 }
+const d = new Date();
+let year = d.getFullYear();
+const yearElements = document.querySelectorAll("#year");
+
+yearElements.forEach(element => {
+  element.innerHTML = year;
+});
