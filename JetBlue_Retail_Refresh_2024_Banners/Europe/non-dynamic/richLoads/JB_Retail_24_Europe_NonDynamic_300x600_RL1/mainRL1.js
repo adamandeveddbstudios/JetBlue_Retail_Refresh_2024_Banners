@@ -96,7 +96,7 @@ function init() {
   tl = new TimelineMax();
 
   animate();
-
+  setRollover();
 }
 
 function animate() {
@@ -129,6 +129,18 @@ function playEndframe(param1){
 //@FT3 code block end
 ////////////////////////////////////////
 
+function setRollover() {
+  document.getElementById('default_exit').addEventListener('mouseover', defaultOver, false);
+  document.getElementById('default_exit').addEventListener('mouseout', defaultOut, false);
+}
+
+function defaultOver() {
+  TweenMax.to('#cta', 0.25, { scale: 1.05, ease: Power1.easeInOut })
+}
+
+function defaultOut() {
+  TweenMax.to('#cta', 0.25, { scale: 1, ease: Power1.easeInOut })
+}
 
 ////////////////////////////////////////
 //@FT4 code block start
