@@ -50,13 +50,20 @@ myFT.on('instantads',function(){
     called 'theFeedLoaded'.
     */
     function feedLoaded(feedItems) {
+      // adjust logo size and positioning for partner logo
+      // change includes to be simple if(partner_logo_src=="n/a") and follow same logic below
+
       let partner_logo_src = feedItems[0].image_logo_300x250;
 
       if(partner_logo_src == "n/a"){
         //no partner logo included in feed, do nothing
+        // document.getElementById('partner_logo_container').style.height = '0px'
       }else{
         //partner logo included in feed
         console.log('partner logo included!')
+        document.getElementById('logoHolder').style.justifyContent = 'space-between'
+        document.getElementById('partner_logo_container').style.width = '77px'
+
 
         var partner_logo_img = myFT.$("#partner_logo_img");
         partner_logo_img[0].src=partner_logo_src;
