@@ -92,14 +92,14 @@ function setupContent() {
     console.log("myCityCharLength", myCityCharLength)
     if (myCityCharLength > 22) {
       // with line break
-      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
-      myH4.style.lineHeight = "18px";
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak gap' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
+      myH4.style.lineHeight = "2px";
 
 
     } else if (myCityCharLength > 17) {
       // with line break
-      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
-      myH4.style.lineHeight = "18px";
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak gap'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
+      myH4.style.lineHeight = "2px";
 
     } else {
       myCity[0].style.fontSize = "15px"
