@@ -124,7 +124,7 @@ video {
 }
 
 #blueBottomCard {
-  background-color: #000064;
+  background-color: #000064 ;
   width: 215px;
   height: 90px;
   left: 513px;
@@ -193,15 +193,17 @@ video {
 
 #terms1 {
   color: white;
-  right: 12px;
+  right: 11px;
   text-align: right;
   top: 68px;
 }
 
 #terms2 {
-  left: 20px;
+  color: white;
+  right: 11px;
+  text-align: right;
+  top: 76px;
 }
-
 #termsCopyright {
   text-align: right;
   right: 10px;

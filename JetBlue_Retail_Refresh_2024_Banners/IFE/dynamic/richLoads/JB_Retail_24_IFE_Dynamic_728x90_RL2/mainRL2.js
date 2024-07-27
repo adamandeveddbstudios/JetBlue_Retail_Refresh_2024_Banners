@@ -24,7 +24,7 @@ var price = myFT.$("#price"),
     priceText = myFT.$("#priceText"),
     dollarSign = myFT.$("#dollar"),
     subhead = myFT.$("#subhead"),
-    terms = myFT.$("#terms"),
+    // terms = myFT.$("#terms"),
     oneWay = myFT.$(".one_way"),
     default_exit = myFT.$("#default_exit"),
     h4 = myFT.$("#h4");
@@ -52,7 +52,7 @@ function checkURL(u){
 function setupContent() {
 
   oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
-  terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
+  // terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
 
 
   // //  Longest possible places names
@@ -66,7 +66,7 @@ function setupContent() {
   if (showDefault) {
     h4[0].innerHTML = 'Enjoy free live TV and sports at every seat.<span class="asterisk">&ast;</span>'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Coverage may vary by aircraft.'
+    // terms[0].innerHTML = '<span class="asterisk">&ast;</span>Coverage may vary by aircraft.'
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
 
