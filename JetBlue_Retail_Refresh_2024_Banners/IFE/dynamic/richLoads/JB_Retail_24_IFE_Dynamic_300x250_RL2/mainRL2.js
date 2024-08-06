@@ -75,7 +75,7 @@ function feedLoaded(feed){
 
     }else{
       // document.getElementById('text_holder').style.height = '150px'
-      document.getElementById('terms').style.top = '236px'
+      document.getElementById('terms').style.top = '227px'
 
     }
     try{
