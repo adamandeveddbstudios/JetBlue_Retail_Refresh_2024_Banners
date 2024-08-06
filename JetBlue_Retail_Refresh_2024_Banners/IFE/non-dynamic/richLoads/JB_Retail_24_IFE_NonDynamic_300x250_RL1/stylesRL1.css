@@ -162,14 +162,14 @@ video {
 
 #termsCopyright {
   width: 250px;
-  top: 227px;
+  top: 219px;
 }
 
 #logoHolder {
   width: 259px;
   height: 29px;
   left: 22px;
-  top: 192px;
+  top: 188px;
   display: flex;
   /* flex-direction: row-reverse; */
   align-items: center;
