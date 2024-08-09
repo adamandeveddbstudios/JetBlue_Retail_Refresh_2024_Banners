@@ -20,7 +20,7 @@ video {
 #main_container {
   position: absolute;
   background-color: #0000AA;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
   overflow: hidden;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -44,8 +44,8 @@ video {
 }
 
 #default_exit {
-  top: 0px;
-  left: 0px;
+  top: -1px;
+  left: -1px;
   width: 300px;
   height: 600px;
   z-index: 500;
