@@ -1,7 +1,7 @@
 FT.manifest({
 	"filename": "index.html",
-	"width": 300,
-	"height": 250,
+	"width": 160,
+	"height": 600,
 	"clickTagCount": 3,
 	"hideBrowsers": ["ie8"],
 	"richLoads": [
