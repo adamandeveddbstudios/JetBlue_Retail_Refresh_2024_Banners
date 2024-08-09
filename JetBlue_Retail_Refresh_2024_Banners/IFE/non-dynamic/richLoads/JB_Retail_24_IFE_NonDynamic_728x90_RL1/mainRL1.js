@@ -1,25 +1,11 @@
-// Global transition speed
-var transitionSpeed = 0.5;
-
-// Global ease setting
-var easing = Power4.easeOut;
-
-// Banner duration timer start time
-var startTime;
-
-// Timeline reference
-var tl, tl2;
-
-////////////////////////////////////////////////////////////////////////
-// @FT1 - code block start
-//VARIABLE DECLARATIONS
-var ctURL = "";
-
-
+var tl;
+var tl2;
+var container = myFT.$("#main_container");
 var default_exit = myFT.$("#default_exit");
 
-var default_exit = myFT.$("#default_exit");
+// var myVid=myFT.$("#video1");
 var clickTag1_url="";
+// var vid_time_triggered=false;
 
 //
 default_exit.on('click',function(){
@@ -29,32 +15,10 @@ default_exit.on('click',function(){
 myFT.on('instantads',function(){
 
   clickTag1_url=myFT.instantAds.clickTag1_url;
-  myFT.dispatch('RL1_available');
 
 })
-myFT.on('theFeedLoaded', function(e) {
-  myFT.dispatch('RL1_ready_to_play');
-});
-myFT.on('RL1_play', function () {
-  init();
-});
-// @FT1 - code block end
-///////////////////////////////////////////////////////////////////////////////////////
 
-
-// Init tricggered by onLoad in Body tag
-function init() {
-  // Set Banner duration timer
-  startTime = new Date();
-
-  // Set Global Timeline
-  tl = new TimelineMax({onComplete:endTime});
-
-  animate();
-  setRollover();
-
-}
-
+init()
 function animate() {
   //make parent (base file) border black
 
@@ -68,7 +32,6 @@ function animate() {
 
 }
 
-// CTA grow on hover
 
 function setRollover() {
   document.getElementById('default_exit').addEventListener('mouseover', defaultOver, false);
@@ -76,19 +39,23 @@ function setRollover() {
 }
 
 function defaultOver() {
-  TweenMax.to('#cta', 0.25, { scale: 1.05, ease: Power1.easeInOut })
+  TweenMax.to('#cta', 0.15, { scale: 1.1, ease: Power1.easeInOut })
 }
 
 function defaultOut() {
-  TweenMax.to('#cta', 0.25, { scale: 1, ease: Power1.easeInOut })
+  TweenMax.to('#cta', 0.15, { scale: 1, ease: Power1.easeInOut })
 }
 
-// End timer
-function endTime(){
-  // show total banner animation time in browser console.
-  var endTime = new Date()
-  console.log("Animation duration: " + ((endTime - startTime) / 1000) + " seconds");
+
+function init() {
+
+  tl = new TimelineMax();
+
+  animate();
+  setRollover();
+		
 }
+
 const d = new Date();
 let year = d.getFullYear();
 const yearElements = document.querySelectorAll("#year");
