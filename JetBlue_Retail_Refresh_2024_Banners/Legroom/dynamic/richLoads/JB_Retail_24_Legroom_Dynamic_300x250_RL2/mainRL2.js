@@ -102,7 +102,8 @@ function setupContent() {
 
   if (deploy === false) {
 
-    h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+    // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+    h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
 
     oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
     terms[0].innerHTML = '<span class="asterisk">&ast;</span>Restrictions apply.'; // - Populates the 'Restrictions Apply.' text
