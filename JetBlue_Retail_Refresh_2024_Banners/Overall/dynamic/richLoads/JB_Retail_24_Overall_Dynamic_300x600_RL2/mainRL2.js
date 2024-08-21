@@ -59,8 +59,8 @@ function setupContent() {
   // origin_longform = 'Providenciales, Turks and Caicos (PLS)'
   // destination_longform = 'Providenciales, Turks and Caicos (PLS)'
 
-  h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
-  // h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
+  // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+  h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
 
 
   if (showDefault) {
