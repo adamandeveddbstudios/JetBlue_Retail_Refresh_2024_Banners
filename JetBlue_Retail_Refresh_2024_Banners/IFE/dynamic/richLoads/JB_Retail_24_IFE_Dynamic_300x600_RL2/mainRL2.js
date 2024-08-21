@@ -60,6 +60,7 @@ function setupContent() {
   // destination_longform = 'Providenciales, Turks and Caicos (PLS)'
   
 
+  // h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
   h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
 
 

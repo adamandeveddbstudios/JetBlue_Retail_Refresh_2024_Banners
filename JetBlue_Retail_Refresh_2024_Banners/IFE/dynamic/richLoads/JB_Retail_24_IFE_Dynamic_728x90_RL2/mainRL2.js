@@ -51,42 +51,92 @@ function checkURL(u){
 
 function setupContent() {
 
-  oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
+  // oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
   // terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
-
 
   // //  Longest possible places names
   // origin_longform = 'Providenciales, Turks and Caicos (PLS)'
   // destination_longform = 'Providenciales, Turks and Caicos (PLS)'
-  
 
-  h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
+  // //  Median places names
+  // origin_longform = 'Sacramento, CA (SMF)'
+  // destination_longform = 'Sacramento, CA (SMF)'
 
+  // // Shortest possible places
+  // origin_longform = 'Miami area'
+  // destination_longform = 'Miami area'
 
   if (showDefault) {
-    h4[0].innerHTML = 'Enjoy free live TV and sports at every seat.<span class="asterisk">&ast;</span>'; // - Populates main headline
+    h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    // terms[0].innerHTML = '<span class="asterisk">&ast;</span>Coverage may vary by aircraft.'
+    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Based on the avg. fleet wide seat pitch of US airlines.'
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
 
+  } else {
+    // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+    h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
+
+    const myH4 = document.getElementById('h4')
+    const myCity = document.getElementsByClassName('city')
+    // myCity[0].style.fontSize = "30px"
+    // console.log(myCity[0].innerText)
+  
+    const myCityOriginLength = myCity[0].innerHTML.split('&')[0].length
+    const myCityDestLength = myCity[1].innerHTML.length
+    console.log(myCityOriginLength)
+    console.log(myCityDestLength)
+  
+    const myCityCharLength = myCityOriginLength > myCityDestLength ? myCityOriginLength : myCityDestLength;
+  
+    console.log("myCityCharLength", myCityCharLength)
+    if (myCityCharLength > 22) {
+      // with line break
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
+      myH4.style.lineHeight = "18px";
+
+
+    } else if (myCityCharLength > 17) {
+      // with line break
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
+      myH4.style.lineHeight = "18px";
+
+    } else {
+      myCity[0].style.fontSize = "15px"
+      myCity[1].style.fontSize = "15px"
+      myH4.style.lineHeight = "1.056";
+    }
+
   }
+  // + " <span class='startingAt'>starting at</span>"
+  // if (showDefault) {
+  //     lowestfare_faredollaramount = defaultPrice;
+  //     h4[0].innerHTML = headline1_txt; // - Populates main headline
+  //     h4[0].innerHTML += "Discover fares from";
+  //     // price[0].style.top = '97px';
+  //     // oneWay[0].style.top = '166px';
+
+  // }
   //hard code price for local testing
   //comment out before uploading
-  //lowestfare_faredollaramount="8"
+  // lowestfare_faredollaramount="4444"
 
   // Alternate text style classes for 3 and 4 characters prices
   // e.g. $30, vs $250 vs. $1000
   priceText[0].innerHTML = lowestfare_faredollaramount;
+
   var price_num_length=lowestfare_faredollaramount.length;
+
   if(lowestfare_faredollaramount.length> 3){
+    price_num_length=4;
+    startingAt[0].className += " startingAt_"+price_num_length+"_char";
     dollarSign[0].className += " dollar_"+price_num_length+"_char";
     priceText[0].className += " number_"+price_num_length+"_char";
     oneWay[0].className += " one_way_"+price_num_length+"_char";
-
   }
 
-
+  // console.log('origin_longform ' + origin_longform.length)
+  // console.log('destination_longform' + destination_longform.length)
 
   myFT.dispatch('RL2_ready_to_play');
 
