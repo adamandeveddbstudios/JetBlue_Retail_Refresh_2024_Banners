@@ -157,13 +157,12 @@ video {
 }
 
 #price .one_way {
-  font-size: 12px;
-  line-height: 11px;
+  margin-top: 29px;
+  font-size: 13px;
+  line-height: 10px;
+  position: inherit;
+  margin-left: 1px;
   font-family: "ESKlarheitGrotesk Smbd";
-  left: 0px;
-  margin-bottom: 5px;
-  align-self: flex-end;
-  position: relative;
 }
 
 #price .asterisk {
