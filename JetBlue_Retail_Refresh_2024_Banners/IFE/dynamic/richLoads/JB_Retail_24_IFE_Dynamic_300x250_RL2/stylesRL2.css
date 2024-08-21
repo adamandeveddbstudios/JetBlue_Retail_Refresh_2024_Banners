@@ -167,15 +167,13 @@ video {
   position: relative;
 }
 
-#one_way {
-  font-family: "ESKlarheitGrotesk Smbd";
+#price .one_way {
+  margin-top: 13px;
   font-size: 12px;
-  line-height: 0.86;
-  position: relative;
-  align-self: flex-end;
-  margin-left: 5px;
-  color: #0000AA;
-  width: 45px;    
+  line-height: 10px;
+  position: inherit;
+  margin-left: 4px;
+  font-family: "ESKlarheitGrotesk Smbd";
 }
 
 #price .asterisk{
