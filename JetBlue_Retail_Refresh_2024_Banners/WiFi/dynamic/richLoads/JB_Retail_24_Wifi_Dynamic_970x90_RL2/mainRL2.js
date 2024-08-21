@@ -74,8 +74,8 @@ function setupContent() {
     startingAt[0].style.display = 'none';
 
   } else {
-    h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
-    // h4[0].innerHTML = "Nonstop flights from <br><span id='origin' class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span id='destination' class='city'>" + destination_longform + "</span>";
+    // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+    h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
 
     const myH4 = document.getElementById('h4')
     const myCity = document.getElementsByClassName('city')
@@ -92,13 +92,13 @@ function setupContent() {
     console.log("myCityCharLength", myCityCharLength)
     if (myCityCharLength > 22) {
       // with line break
-      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
       myH4.style.lineHeight = "18px";
 
 
     } else if (myCityCharLength > 17) {
       // with line break
-      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
       myH4.style.lineHeight = "18px";
 
     } else {
