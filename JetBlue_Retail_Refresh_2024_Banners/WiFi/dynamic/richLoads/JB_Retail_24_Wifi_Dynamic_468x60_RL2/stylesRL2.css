@@ -92,7 +92,7 @@ video {
     font-family: "ESKlarheitGrotesk Smbd";
     font-size: 10px;
     line-height: 12px;
-    top: 0px;
+    top: -3px;
     left: 17px;
 }
 
@@ -115,7 +115,7 @@ video {
 
 .city{
   font-size: 15px;
-  line-height: 23px;
+  /* line-height: 23px; */
   font-family: "ESKlarheitGrotesk Xbd";
 }
 

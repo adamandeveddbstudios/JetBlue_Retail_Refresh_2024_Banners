@@ -74,8 +74,8 @@ function setupContent() {
     startingAt[0].style.display = 'none';
 
   } else {
-    // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
-    h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak gap'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
+    h4[0].innerHTML = "Fly from <br><span class='city'>" + "Boston" + "</span><br><span class='to'>to</span> <span class='city'>" + "West Palm Beach" + "</span>";
+    // h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
 
     const myH4 = document.getElementById('h4')
     const myCity = document.getElementsByClassName('city')
