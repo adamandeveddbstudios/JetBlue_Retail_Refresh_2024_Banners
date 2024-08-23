@@ -197,6 +197,7 @@ video {
   padding: 9px 0px;
   transform-origin: 50% 50%;
   position: relative;
+  top: 4px;
 }
 
 #terms {
