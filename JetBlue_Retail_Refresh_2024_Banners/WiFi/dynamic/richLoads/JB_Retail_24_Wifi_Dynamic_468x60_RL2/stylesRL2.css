@@ -135,7 +135,7 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 9px 3px;
+  margin: 5px 9px 3px;
   font-family: "ESKlarheitGrotesk Smbd";
 }
 
