@@ -12,7 +12,7 @@ var tl;
 
 //@FT VARIABLE DECLARATIONS
 var deploy = true
-    showDefault=false,
+    showDefault=true,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
@@ -98,9 +98,14 @@ function feedLoaded(feed){
   }
 }
 
+
+
 function setupContent() {
 
+
+
   if (deploy === false) {
+    
 
     // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
     h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
@@ -134,7 +139,7 @@ function setupContent() {
     // -------------------
 
     if (showDefault) {
-      h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.'; // - Populates main headline
+      h4[0].innerHTML = 'Stretch your legs (not your budget) with the most legroom in coach.<span class="asterisk">&ast;</span>'; // - Populates main headline
       h4[0].classList.add('defaultEndframe')
       // reposition CTA
       cta[0].style.marginLeft = 0 

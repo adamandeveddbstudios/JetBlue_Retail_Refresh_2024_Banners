@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=false,
+var showDefault=true,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "69",
@@ -67,12 +67,12 @@ function setupContent() {
   // destination_longform = 'Miami area'
 
   if (showDefault) {
-    h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.'; // - Populates main headline
+    h4[0].innerHTML = 'Stretch your legs (not your budget)<br>with the most legroom in coach.<span class="asterisk">&ast;</span>'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
     terms[0].innerHTML = '<span class="asterisk">&ast;</span>Based on the avg. fleet wide seat pitch of US airlines.'
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
-
+    
   } else {
     // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
     h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";

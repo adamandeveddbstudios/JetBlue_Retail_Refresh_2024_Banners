@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=false,
+var showDefault=true,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
@@ -56,8 +56,17 @@ function setupContent() {
 
 
   // //  Longest possible places names
-  // origin_longform = 'Providenciales, Turks and Caicos (PLS)'
-  // destination_longform = 'Providenciales, Turks and Caicos (PLS)'
+   //  Longest possible places names
+  //  origin_longform = 'Providenciales, Turks and Caicos (PLS)'
+  //  destination_longform = 'Providenciales, Turks and Caicos (PLS)'
+
+    //  Median places names
+    // origin_longform = 'Sacramento, CA (SMF)'
+    // destination_longform = 'Sacramento, CA (SMF)'
+
+    // Shortest possible places
+    // origin_longform = 'Miami, FL (MIA)'
+    // destination_longform = 'Miami, FL (MIA)'
   
 
   // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
@@ -65,7 +74,7 @@ function setupContent() {
 
 
   if (showDefault) {
-    h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.';; // - Populates main headline
+    h4[0].innerHTML = 'Stretch your legs (not your budget) with the most legroom in coach.<span class="asterisk">&ast;</span>'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
     terms[0].innerHTML = '<span class="asterisk">&ast;</span>Based on the avg. fleet wide seat pitch of US airlines.'
     price[0].style.display = 'none';
