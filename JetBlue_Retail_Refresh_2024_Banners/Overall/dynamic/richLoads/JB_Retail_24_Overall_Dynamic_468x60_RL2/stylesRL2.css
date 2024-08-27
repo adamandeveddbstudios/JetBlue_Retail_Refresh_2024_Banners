@@ -242,8 +242,9 @@ video {
 
 .defaultEndframe {
   font-family: "ESKlarheitGrotesk Xbd" !important;
-  font-size: 21px !important;
-  line-height: 24px !important;
+  font-size: 17px !important;
+  line-height: 19px !important;
+  top: 2px;
 }
 
 .defaultEndframe > .asterisk {
