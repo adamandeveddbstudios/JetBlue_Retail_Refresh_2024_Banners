@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=false,
+var showDefault=true,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "69",
@@ -67,9 +67,9 @@ function setupContent() {
   // destination_longform = 'Miami area'
 
   if (showDefault) {
-    h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.'; // - Populates main headline
+    h4[0].innerHTML = 'Go from legroom to legrooooom<br>with an Even More<span class="asterisk">®</span> Space seat.'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Based on the avg. fleet wide seat pitch of US airlines.'
+    terms[0].innerHTML = '<sup class="asterisk">&ast;</sup>Restrictions apply.<br/>&copy; 2024 JetBlue Airways Corporation.<br/>All rights reserved.'
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
 

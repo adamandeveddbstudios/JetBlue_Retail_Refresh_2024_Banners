@@ -102,7 +102,8 @@ function setupContent() {
 
   if (deploy === false) {
 
-    h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+    h4[0].innerHTML = "Fly from<br><span class='city'>" + origin_formatted + "</span> <span class='to'>to</span> <span class='city'>" + destination_formatted + "</span>"; // - Populates main headline
+
 
     oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
     terms[0].innerHTML = '<span class="asterisk">&ast;</span>Restrictions apply.'; // - Populates the 'Restrictions Apply.' text
@@ -133,7 +134,7 @@ function setupContent() {
     // -------------------
 
     if (showDefault) {
-      h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.'; // - Populates main headline
+      h4[0].innerHTML = 'Go from legroom to legrooooom with an<br>Even More<span class="asterisk">®</span> Space seat.'; // - Populates main headline
       h4[0].classList.add('defaultEndframe')
       // reposition CTA
       cta[0].style.marginLeft = 0 
