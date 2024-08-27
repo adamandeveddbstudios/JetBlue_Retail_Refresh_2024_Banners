@@ -59,8 +59,8 @@ function setupContent() {
   // destination_longform = 'Providenciales, Turks and Caicos (PLS)'
 
   // //  Median places names
-  // origin_longform = 'Sacramento, CA (SMF)'
-  // destination_longform = 'Sacramento, CA (SMF)'
+  origin_longform = 'Charleston'
+  destination_longform = 'Fort Lauderdale'
 
   // // Shortest possible places
   // origin_longform = 'Miami area'
@@ -69,13 +69,13 @@ function setupContent() {
   if (showDefault) {
     h4[0].innerHTML = 'Go from legroom to legrooooom<br>with an Even More<span class="asterisk">®</span> Space seat.'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    terms[0].innerHTML = '<sup class="asterisk">&ast;</sup>Restrictions apply.<br/>&copy; 2024 JetBlue Airways Corporation.<br/>All rights reserved.'
+    terms[0].innerHTML = ''
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
 
   } else {
-    h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
-    // h4[0].innerHTML = "Nonstop flights from <br><span id='origin' class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span id='destination' class='city'>" + destination_longform + "</span>";
+    // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
+    h4[0].innerHTML = "Nonstop flights from <br><span id='origin' class='city'>" + origin_longform + "</span><br><span class='to'>to</span> <span id='destination' class='city'>" + destination_longform + "</span>";
 
     const myH4 = document.getElementById('h4')
     const myCity = document.getElementsByClassName('city')

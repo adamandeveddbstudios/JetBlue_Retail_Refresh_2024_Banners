@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=true,
+var showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
@@ -52,7 +52,7 @@ function checkURL(u){
 function setupContent() {
 
   oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
-  terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
+  terms[0].innerHTML = ''; // - Populates the 'Restrictions Apply.' text
 
 
   // //  Longest possible places names
@@ -66,7 +66,7 @@ function setupContent() {
   if (showDefault) {
     h4[0].innerHTML = 'Go from legroom to legrooooom with an<br>Even More<span class="asterisk">®</span> Space seat.'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Based on the avg. fleet wide seat pitch of US airlines.'
+    terms[0].innerHTML = ''
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
 
