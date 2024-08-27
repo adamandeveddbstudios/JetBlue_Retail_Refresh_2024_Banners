@@ -202,11 +202,12 @@ video {
   position: absolute;
   font-family: "ESKlarheitGrotesk Smbd";
   color: #ffffff;
-  /* width: 600px; */
+  width: 190px;
   font-size: 7px;
   line-height: 9px;
-  left: 528px;
+  right: 17px;
   top: 78px;
+  text-align: right;
 }
 
 .startingAt_4_char{
