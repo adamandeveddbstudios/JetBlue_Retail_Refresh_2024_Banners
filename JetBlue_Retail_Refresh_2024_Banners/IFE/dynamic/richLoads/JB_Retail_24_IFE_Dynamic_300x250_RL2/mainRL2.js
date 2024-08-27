@@ -12,7 +12,7 @@ var tl;
 
 //@FT VARIABLE DECLARATIONS
 var deploy = true
-    showDefault=false,
+    showDefault=true,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
@@ -134,7 +134,7 @@ function setupContent() {
     // -------------------
 
     if (showDefault) {
-      h4[0].innerHTML = 'Enjoy the most legroom in coach<span class="asterisk">&ast;</span> at a low fare.'; // - Populates main headline
+      h4[0].innerHTML = 'Make time fly with seatback entertainment<span class="asterisk">&ast;</span> that goes above and beyond.'; // - Populates main headline
       h4[0].classList.add('defaultEndframe')
       // reposition CTA
       cta[0].style.marginLeft = 0 
