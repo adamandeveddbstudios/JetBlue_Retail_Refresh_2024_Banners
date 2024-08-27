@@ -113,7 +113,8 @@ function setupContent() {
     myCity[1].style.fontSize = "19px"
     priceText[0].innerHTML = "XXX";
 
-  } else {
+  } 
+  else {
 
     oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
     terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
