@@ -66,7 +66,7 @@ function setupContent() {
   // destination_longform = 'Miami area'
 
   if (showDefault) {
-    h4[0].innerHTML = 'Make time fly with seatback<br>entertainment<span class="asterisk">&ast;</span>that goes above<br>and beyond.'; // - Populates main headline
+    h4[0].innerHTML = 'Make time fly with seatback<br>entertainment<span class="asterisk">&ast;</span> that goes above<br>and beyond.'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
     terms[0].innerHTML = '<span class="asterisk">&ast;</span>Availability and coverage may vary by aircraft.' // Populate Terms
     price[0].style.display = 'none';
