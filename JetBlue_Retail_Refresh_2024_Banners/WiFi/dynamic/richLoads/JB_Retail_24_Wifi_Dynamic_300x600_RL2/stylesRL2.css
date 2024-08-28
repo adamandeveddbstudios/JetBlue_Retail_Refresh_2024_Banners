@@ -214,8 +214,8 @@ video {
 
 .defaultEndframe > .asterisk {
   font-size: 19px !important;
-  line-height: 23px !important;
-  top: -8px !important;
+  line-height: 21px !important;
+  top: -9px !important;
   left: -2px !important;
   position: relative !important;
 }

@@ -132,10 +132,10 @@ video {
 }
 
 .asterisk {
-  font-size: 10px;
-  line-height: 0px;
+  font-size: 11px;
+  line-height: 12px;
   left: 0px;
-  top: -6px;
+  top: -7px;
   position: relative;
 }
 
