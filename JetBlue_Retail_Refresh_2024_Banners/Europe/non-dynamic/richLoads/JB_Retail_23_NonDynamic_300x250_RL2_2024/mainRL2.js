@@ -11,7 +11,7 @@ var tl;
 
 //@FT VARIABLE DECLARATIONS
 var deploy = true
-    showDefault=false,
+    showDefault=true,
     thisFeedLoaded=false;
 
 var default_exit = myFT.$("#default_exit");

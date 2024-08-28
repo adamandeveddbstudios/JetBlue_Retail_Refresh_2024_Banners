@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=true,
+var showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
@@ -66,7 +66,7 @@ function setupContent() {
   if (showDefault) {
     h4[0].innerHTML = 'Make time fly with seatback entertainment<span class="asterisk">&ast;</span> that goes above and beyond.'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Coverage may vary by aircraft.'
+    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Availability and coverage may vary by aircraft.' // Populate Terms
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
 

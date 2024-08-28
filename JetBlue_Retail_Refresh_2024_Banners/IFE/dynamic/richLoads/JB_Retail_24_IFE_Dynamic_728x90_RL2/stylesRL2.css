@@ -115,7 +115,7 @@ video {
 
 .city{
   font-size: 15px;
-  line-height: 21px;
+  line-height: 18px;
   font-family: "ESKlarheitGrotesk Xbd";
 }
 
@@ -213,7 +213,7 @@ video {
   letter-spacing: -0.06pt;
   line-height: 9px;
   right: 10px;
-  top: 68px;
+  top: 76px;
 }
 
 .startingAt_4_char{
@@ -246,14 +246,14 @@ video {
 
 .defaultEndframe {
   font-family: "ESKlarheitGrotesk Xbd" !important;
-  font-size: 19px !important;
+  font-size: 17px !important;
   line-height: 21px !important;
 }
 
 .defaultEndframe > .asterisk {
   font-size: 13px!important;
   line-height: 14px!important;
-  top: -6px!important;
+  top: -3px!important;
   left: -1px!important;
   position: relative !important;
 }

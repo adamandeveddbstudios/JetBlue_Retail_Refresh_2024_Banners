@@ -11,26 +11,26 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=true,
+var showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
-    defaultPrice = "",
+    defaultPrice = "69",
     origin_longform="",
     lowestfare_faredollaramount="",
     destination_longform="";
 
 var price = myFT.$("#price"),
-    startingAt = myFT.$("#starting_at"), 
+    startingAt = myFT.$("#starting_at"),
     priceText = myFT.$("#priceText"),
     dollarSign = myFT.$("#dollar"),
     subhead = myFT.$("#subhead"),
-    // terms = myFT.$("#terms"),
+    terms = myFT.$("#terms"),
     oneWay = myFT.$(".one_way"),
     default_exit = myFT.$("#default_exit"),
     h4 = myFT.$("#h4");
 
 //@FT Setting local variable values using FT dynamic variables (instantAds)
-ctURL           = myFT.instantAds.Retail_default_clickTag_URL;
+ctURL           = myFT.instantAds.Retail_default_clickTag_URL
 headline_color  = myFT.instantAds.headline_color;
 subhead_color   = myFT.instantAds.subhead_color;
 price_color     = myFT.instantAds.price_color;
@@ -50,9 +50,8 @@ function checkURL(u){
 }
 
 function setupContent() {
-
-  // oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
-  // terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
+  oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
+  terms[0].innerHTML = terms_txt; // - Populates the 'Restrictions Apply.' text
 
   // //  Longest possible places names
   // origin_longform = 'Providenciales, Turks and Caicos (PLS)'
@@ -63,16 +62,16 @@ function setupContent() {
   // destination_longform = 'Sacramento, CA (SMF)'
 
   // // Shortest possible places
-  // origin_longform = 'Miami area'
-  // destination_longform = 'Miami area'
+  origin_longform = 'Miami area'
+  destination_longform = 'Miami area'
 
   if (showDefault) {
-    h4[0].innerHTML = 'Make time fly with seatback<br>entertainment<span class="asterisk">&ast;</span> that goes<br>above and beyond.'; // - Populates main headline
+    h4[0].innerHTML = 'Stretch your legs (not your budget)<br>with the most legroom in coach.<span class="asterisk">&ast;</span>'; // - Populates main headline
     h4[0].classList.add('defaultEndframe')
-    // terms[0].innerHTML = '';
+    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Availability and coverage may vary by aircraft.' // Populate Terms
     price[0].style.display = 'none';
     startingAt[0].style.display = 'none';
-
+    
   } else {
     // h4[0].innerHTML = "<span class='sm blue'>Fly from </span><br><span class='blue city'>" + "New York City" + "</span> <span class='blue to'>to</span> <span class='blue city'>" + "Turks & Caicos" + "</span>"; // - Populates main headline
     h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
@@ -80,7 +79,7 @@ function setupContent() {
     const myH4 = document.getElementById('h4')
     const myCity = document.getElementsByClassName('city')
     // myCity[0].style.fontSize = "30px"
-    // console.log(myCity[0].innerText)
+    console.log(myCity[0].innerText)
   
     const myCityOriginLength = myCity[0].innerHTML.split('&')[0].length
     const myCityDestLength = myCity[1].innerHTML.length
@@ -92,13 +91,13 @@ function setupContent() {
     console.log("myCityCharLength", myCityCharLength)
     if (myCityCharLength > 22) {
       // with line break
-      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city cityLineBreak' style='font-size: 12px; letter-spacing: -0.3px'>" + destination_longform + "</span>";
       myH4.style.lineHeight = "18px";
 
 
     } else if (myCityCharLength > 17) {
       // with line break
-      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak'>" + origin_longform + "</span><br> <span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
+      h4[0].innerHTML = "Fly from <br><span class='city cityLineBreak'>" + origin_longform + "</span><br><span class='to'>to</span> <span class='city cityLineBreak'>" + destination_longform + "</span>";
       myH4.style.lineHeight = "18px";
 
     } else {
@@ -154,12 +153,11 @@ function feedLoaded(feed){
   if(!thisFeedLoaded){
     thisFeedLoaded=true;
     try{
-
         lowestfare_faredollaramount = feed[0].lowestfare_faredollaramount;
         origin_longform = feed[0].origin_formatted;
         destination_longform = feed[0].destination_formatted;        
         ctURL = checkURL(myFT.instantAds.Retail_dynamic_clickTag_URL) ? myFT.instantAds.Retail_dynamic_clickTag_URL : feedItems[0]['url'];
-        
+
         if(lowestfare_faredollaramount == "0"){
             //console.log('load default');
             showDefault = true;

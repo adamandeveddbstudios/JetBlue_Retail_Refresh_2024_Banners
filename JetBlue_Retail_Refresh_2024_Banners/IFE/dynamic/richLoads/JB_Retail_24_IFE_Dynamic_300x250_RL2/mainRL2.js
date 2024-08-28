@@ -12,7 +12,7 @@ var tl;
 
 //@FT VARIABLE DECLARATIONS
 var deploy = true
-    showDefault=true,
+    showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
@@ -106,7 +106,7 @@ function setupContent() {
     h4[0].innerHTML = "Fly from <br><span class='city'>" + origin_longform + "</span> <span class='to'>to</span> <span class='city'>" + destination_longform + "</span>";
 
     oneWay[0].innerHTML = oneWay_txt; // - Populates the 'one-way' text
-    terms[0].innerHTML = '<span class="asterisk">&ast;</span>Restrictions apply.'; // - Populates the 'Restrictions Apply.' text
+    terms[0].innerHTML = ''; // - Populates the 'Restrictions Apply.' text
     
     const myCity = document.getElementsByClassName('city')
     myCity[0].style.fontSize = "19px"
@@ -139,7 +139,7 @@ function setupContent() {
       // reposition CTA
       cta[0].style.marginLeft = 0 
       cta[0].style.marginTop = "22px"
-      terms[0].innerHTML = '<span class="asterisk">&ast;</span>Based on the avg. fleet wide seat pitch of US airlines.' // Populate Terms
+      terms[0].innerHTML = '<span class="asterisk">&ast;</span>Availability and coverage may vary by aircraft.' // Populate Terms
 
       // Turn off Price holder etc.
       price[0].style.display = 'none';
