@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=false,
+var showDefault=true,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "69",
@@ -62,8 +62,8 @@ function setupContent() {
   // destination_longform = 'Sacramento, CA (SMF)'
 
   // // Shortest possible places
-  origin_longform = 'Miami area'
-  destination_longform = 'Miami area'
+  // origin_longform = 'Miami area'
+  // destination_longform = 'Miami area'
 
   if (showDefault) {
     h4[0].innerHTML = 'Stretch your legs (not your budget)<br>with the most legroom in coach.<span class="asterisk">&ast;</span>'; // - Populates main headline
