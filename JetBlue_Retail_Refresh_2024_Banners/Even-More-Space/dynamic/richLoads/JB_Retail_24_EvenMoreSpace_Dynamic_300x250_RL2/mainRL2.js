@@ -12,7 +12,7 @@ var tl;
 
 //@FT VARIABLE DECLARATIONS
 var deploy = true
-    showDefault=true,
+    showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "",
