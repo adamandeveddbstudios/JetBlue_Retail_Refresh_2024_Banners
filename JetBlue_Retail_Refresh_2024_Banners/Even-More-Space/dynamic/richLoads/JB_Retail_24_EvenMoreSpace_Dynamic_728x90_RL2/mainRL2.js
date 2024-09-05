@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=true,
+var showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "69",
@@ -59,8 +59,8 @@ function setupContent() {
   // destination_longform = 'Providenciales, Turks and Caicos (PLS)'
 
   // //  Median places names
-  origin_longform = 'Charleston'
-  destination_longform = 'Fort Lauderdale'
+  // origin_longform = 'Charleston'
+  // destination_longform = 'Fort Lauderdale'
 
   // // Shortest possible places
   // origin_longform = 'Miami area'

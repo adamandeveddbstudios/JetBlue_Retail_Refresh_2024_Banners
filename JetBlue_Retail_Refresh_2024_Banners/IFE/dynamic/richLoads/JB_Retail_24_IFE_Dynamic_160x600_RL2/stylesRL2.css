@@ -58,6 +58,7 @@ video {
   width: 160px;
   height: 600px;
   z-index: 500;
+  cursor: pointer;
 }
 
 @font-face {

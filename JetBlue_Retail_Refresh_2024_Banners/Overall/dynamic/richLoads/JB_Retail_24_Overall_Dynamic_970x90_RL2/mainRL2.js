@@ -11,7 +11,7 @@ var tl;
 
 
 //@FT VARIABLE DECLARATIONS
-var showDefault=true,
+var showDefault=false,
     thisFeedLoaded=false,
     ctURL = "",
     defaultPrice = "69",
